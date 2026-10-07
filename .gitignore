@@ -1,0 +1,6 @@
+.env
+*.key
+private/
+__pycache__/
+.venv/
+.vscode/

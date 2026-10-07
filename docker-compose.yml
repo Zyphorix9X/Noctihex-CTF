@@ -1,0 +1,110 @@
+services:
+
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ctfd
+      MYSQL_USER: ctfd
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  ctfd:
+    image: ctfd/ctfd:latest
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: mysql+pymysql://ctfd:${MYSQL_PASSWORD}@mysql/ctfd
+      REDIS_URL: redis://redis:6379
+      SECRET_KEY: ${CTFD_SECRET_KEY}
+      UPLOAD_FOLDER: /var/uploads
+    volumes:
+      - ctfd_uploads:/var/uploads
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  nhx03:
+    build:
+      context: ./challenges/nhx03-mirror-account
+    environment:
+      NHX03_FLAG: ${NHX03_FLAG}
+      NHX03_EVIDENCE: ${NHX03_EVIDENCE}
+      FLASK_SECRET_KEY: ${NHX03_SECRET_KEY}
+    networks:
+      - challenges
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 256m
+    pids_limit: 100
+
+  nhx05:
+    build:
+      context: ./challenges/nhx05-misplaced-trust
+    environment:
+      NHX05_FLAG: ${NHX05_FLAG}
+      NHX05_EVIDENCE: ${NHX05_EVIDENCE}
+    ports:
+      - "127.0.0.1:2225:22"
+    networks:
+      - challenges
+    mem_limit: 256m
+    pids_limit: 100
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./platform/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./platform/nginx/tls:/etc/nginx/tls:ro
+    networks:
+      - frontend
+      - challenges
+    depends_on:
+      - ctfd
+      - nhx03
+
+networks:
+
+  frontend:
+    internal: true
+
+  backend:
+    internal: true
+
+  challenges:
+    internal: true
+
+volumes:
+
+  mysql_data:
+  ctfd_uploads:
