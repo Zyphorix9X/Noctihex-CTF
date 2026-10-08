@@ -1,0 +1,7 @@
+stage,title,owner,points,hint_costs,artifact_or_url,service_name,prerequisite,fragment_label,source_commit
+NHX-01,Whispers in the Static,Member 2,100,5 / 10,midnight_signal.png,Not applicable,None,E01,To record
+NHX-02,Cipher at Dusk,Member 2,100,5 / 10,dusk_message.txt,Not applicable,NHX-01 story clue,E02,To record
+NHX-03,Mirror Account,Member 2,200,10 / 20,https://noctihex.local/labs/nhx03/,nhx03,NHX-02 story clue,E03,To record
+NHX-04,Packet After Midnight,Member 3,200,10 / 20,midnight_traffic.pcap,Not applicable,NHX-03 story clue,E04,To record
+NHX-05,Misplaced Trust,Member 3,300,15 / 30,SSH port 2225,nhx05,NHX-04 story clue,E05,To record
+NHX-06,NoctiCore,Member 3,500,20 / 40 / 60,nocticore,Not applicable,Evidence from NHX-01 through NHX-05,Uses E01-E05,To record
