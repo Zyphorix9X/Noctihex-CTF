@@ -74,6 +74,7 @@ services:
       - "127.0.0.1:2225:22"
     networks:
       - challenges
+      - nhx05_access
     mem_limit: 256m
     pids_limit: 100
 
@@ -103,6 +104,9 @@ networks:
 
   challenges:
     internal: true
+
+  nhx05_access:
+    driver: bridge
 
 volumes:
 
