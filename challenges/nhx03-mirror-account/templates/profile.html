@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>NoctiHex Profile</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            padding: 40px;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: auto;
+            background: #151c30;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .note {
+            background: #0d1425;
+            padding: 15px;
+            margin-top: 20px;
+            word-wrap: break-word;
+        }
+
+        a {
+            color: #9ecbff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>NoctiHex Employee Profile</h2>
+
+    <p>
+        <strong>Profile ID:</strong>
+        {{ profile_id }}
+    </p>
+
+    <p>
+        <strong>Username:</strong>
+        {{ profile.username }}
+    </p>
+
+    <p>
+        <strong>Role:</strong>
+        {{ profile.role }}
+    </p>
+
+    <div class="note">
+
+        <strong>Internal Note</strong>
+
+        <p>
+            {{ profile.note }}
+        </p>
+
+    </div>
+
+    <p>
+        <a href="/logout">Logout</a>
+    </p>
+
+</div>
+
+</body>
+</html>

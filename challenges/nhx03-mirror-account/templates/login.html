@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoctiHex Mirror Account</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #151c30;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: #ff7676;
+        }
+
+        .hint {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2>NoctiHex Employee Portal</h2>
+
+    <p>Authorized challenge users only.</p>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        >
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+    <div class="hint">
+        Training credentials:<br>
+        tester / noctihex123
+    </div>
+
+</div>
+
+</body>
+</html>
