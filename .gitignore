@@ -7,3 +7,9 @@ __pycache__/
 .pytest_cache/
 testing/downloads/
 *.mp4
+
+.env.*
+!.env.example
+*.py[cod]
+testing/test-results/finish-local-transcript.txt
+testing/test-results/finish-local-command-output.txt
