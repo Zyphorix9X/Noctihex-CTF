@@ -90,6 +90,7 @@ services:
     networks:
       - frontend
       - challenges
+      - nginx_access
     depends_on:
       - ctfd
       - nhx03
@@ -106,6 +107,9 @@ networks:
     internal: true
 
   nhx05_access:
+    driver: bridge
+
+  nginx_access:
     driver: bridge
 
 volumes:
