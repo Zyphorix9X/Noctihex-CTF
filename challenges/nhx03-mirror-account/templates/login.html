@@ -12,6 +12,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
 
         .card {
@@ -58,7 +59,10 @@
         <p class="error">{{ error }}</p>
     {% endif %}
 
-    <form method="POST">
+    <form
+        method="POST"
+        action="{{ url_for('login') }}"
+    >
 
         <input
             type="text"
