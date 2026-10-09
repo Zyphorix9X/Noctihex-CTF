@@ -1,0 +1,301 @@
+{
+  "timestamp": "2026-10-09T20:46:34.916206+05:30",
+  "transport": "Verified local HTTPS using the project certificate",
+  "tests": [
+    {
+      "test": "Invalid player login",
+      "status": "PASS",
+      "actual": "Wrong credentials rejected with login page"
+    },
+    {
+      "test": "Player authentication",
+      "status": "PASS",
+      "actual": "Separate ordinary player logged in"
+    },
+    {
+      "test": "Six visible stages",
+      "status": "PASS",
+      "actual": "Six stages totaling 1400 points"
+    },
+    {
+      "test": "NHX-01 player download",
+      "status": "PASS",
+      "actual": "Player download SHA256 matches approved source"
+    },
+    {
+      "test": "NHX-01 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-01 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-01 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-01 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "NHX-02 player download",
+      "status": "PASS",
+      "actual": "Player download SHA256 matches approved source"
+    },
+    {
+      "test": "NHX-02 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-02 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-02 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-02 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "NHX-03 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-03 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-03 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-03 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "NHX-04 player download",
+      "status": "PASS",
+      "actual": "Player download SHA256 matches approved source"
+    },
+    {
+      "test": "NHX-04 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-04 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-04 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-04 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "NHX-05 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-05 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-05 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-05 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "NHX-06 player download",
+      "status": "PASS",
+      "actual": "Player download SHA256 matches approved source"
+    },
+    {
+      "test": "NHX-06 wrong flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-06 cross-stage flag",
+      "status": "PASS",
+      "actual": "Platform response: incorrect"
+    },
+    {
+      "test": "NHX-06 correct flag",
+      "status": "PASS",
+      "actual": "Platform response: correct"
+    },
+    {
+      "test": "NHX-06 duplicate flag",
+      "status": "PASS",
+      "actual": "Platform response: already_solved"
+    },
+    {
+      "test": "No-hint total score",
+      "status": "PASS",
+      "actual": "Player score: 1400"
+    },
+    {
+      "test": "NHX-01 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-01 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "NHX-02 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-02 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "NHX-03 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-03 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "NHX-04 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-04 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "NHX-05 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-05 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "NHX-06 hint prices",
+      "status": "PASS",
+      "actual": "Player-visible hint costs match proposal"
+    },
+    {
+      "test": "NHX-06 hint purchase",
+      "status": "PASS",
+      "actual": "First progressive hint unlocked"
+    },
+    {
+      "test": "Hint deductions",
+      "status": "PASS",
+      "actual": "Score 1335; expected 1335"
+    },
+    {
+      "test": "NHX-03 unauthenticated profile",
+      "status": "PASS",
+      "actual": "Unauthenticated request redirects without flag"
+    },
+    {
+      "test": "NHX-03 wrong login",
+      "status": "PASS",
+      "actual": "Generic error displayed"
+    },
+    {
+      "test": "NHX-03 login and routing",
+      "status": "PASS",
+      "actual": "Expected profile under challenge prefix; own record contains no flag"
+    },
+    {
+      "test": "NHX-03 intended solve",
+      "status": "PASS",
+      "actual": "Intended profile request recovers configured flag and E03"
+    },
+    {
+      "test": "NHX-03 cookie boundary",
+      "status": "PASS",
+      "actual": "Dedicated Secure cookie is restricted to challenge path"
+    },
+    {
+      "test": "NHX-03 logout",
+      "status": "PASS",
+      "actual": "Logout removes authenticated access"
+    },
+    {
+      "test": "NHX-05 SSH player",
+      "status": "PASS",
+      "actual": "SSH authenticates a non-root analyst"
+    },
+    {
+      "test": "NHX-05 restricted sudo",
+      "status": "PASS",
+      "actual": "Only author-configured backup sudo permission inspected"
+    },
+    {
+      "test": "NHX-05 protected file",
+      "status": "PASS",
+      "actual": "Direct protected-file access denied"
+    },
+    {
+      "test": "NHX-05 normal backup",
+      "status": "PASS",
+      "actual": "Allowed backup succeeds"
+    },
+    {
+      "test": "NHX-05 outside-prefix path",
+      "status": "PASS",
+      "actual": "Outside-prefix path rejected"
+    },
+    {
+      "test": "NHX-05 intended solve",
+      "status": "PASS",
+      "actual": "Intended training traversal recovers protected flag and E05"
+    },
+    {
+      "test": "NHX-06 Linux binary correct chain",
+      "status": "PASS",
+      "actual": "Delivered ELF executed in Linux and accepted E01\u00e2\u20ac\u201cE05"
+    },
+    {
+      "test": "NHX-06 Linux binary wrong chain",
+      "status": "PASS",
+      "actual": "Wrong chain exits nonzero without a flag"
+    }
+  ]
+}

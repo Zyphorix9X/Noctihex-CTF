@@ -1,0 +1,49 @@
+{
+  "scope": "Controlled local endpoints only; available positive controls verified",
+  "tests": [
+    {
+      "test": "NHX-03 TCP probe works on its own local listener",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-05 TCP probe works on its own local SSH listener",
+      "status": "PASS"
+    },
+    {
+      "test": "Canary reachable from ordinary access network",
+      "status": "PASS"
+    },
+    {
+      "test": "MySQL reachable from authorized backend control",
+      "status": "PASS"
+    },
+    {
+      "test": "Redis reachable from authorized backend control",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-03 cannot reach ordinary-access canary",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-05 cannot reach ordinary-access canary",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-03 cannot reach MySQL",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-05 cannot reach MySQL",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-03 cannot reach Redis",
+      "status": "PASS"
+    },
+    {
+      "test": "NHX-05 cannot reach Redis",
+      "status": "PASS"
+    }
+  ]
+}

@@ -29,21 +29,13 @@ challenge/midnight_traffic.pcap
 5. Follow the relevant TCP stream.
 6. Recover the evidence fragment and stage flag.
 
-## Evidence Fragment
-
-DEV_E4
-
-## Development Flag
-
-NOCTIHEX{DEV_NHX04}
-
 ## Hints
 
-### Hint 1
+### Hint 1 — 10 points
 Start with Statistics and Conversations instead of inspecting
 every packet manually.
 
-### Hint 2
+### Hint 2 — 20 points
 Look for unusual HTTP paths and identify the suspicious host.
 
 ## Reset

@@ -1,0 +1,4 @@
+Main Compose: config --quiet exited 0
+Recovery override: config --quiet exited 0
+PowerShell reset helper: parsed without syntax errors
+These checks validate configuration syntax, not running containers.

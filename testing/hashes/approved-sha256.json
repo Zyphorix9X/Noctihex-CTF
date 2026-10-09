@@ -1,0 +1,22 @@
+{
+  "NHX-01": {
+    "file": "challenges/nhx01-whispers/challenge/midnight_signal.png",
+    "sha256": "91e4dade346108ca213daf663dc4e0e75857c06ee3f6c37950b791e4fce1a681",
+    "source_commit": "c658a4c (starting revision)"
+  },
+  "NHX-02": {
+    "file": "challenges/nhx02-cipher/challenge/dusk_message.txt",
+    "sha256": "7eef7cc1bdaf35e0282ad3d238e6c9576269f4ca855ed3652e45766887705e92",
+    "source_commit": "c658a4c (starting revision)"
+  },
+  "NHX-04": {
+    "file": "challenges/nhx04-packet-midnight/challenge/midnight_traffic.pcap",
+    "sha256": "9ab4421e3871b6886ed5407d68f050c9beca0284723ed8605493d04d8ad2781f",
+    "source_commit": "c658a4c (starting revision)"
+  },
+  "NHX-06": {
+    "file": "challenges/nhx06-nocticore/challenge/nocticore",
+    "sha256": "cf8b79873556438985e9a6be0233472512861886f5303e60e247a610d7f6c16c",
+    "source_commit": "c658a4c (starting revision)"
+  }
+}

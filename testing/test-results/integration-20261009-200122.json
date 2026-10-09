@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-09T20:01:22.097639+05:30",
+  "source_commit": "c658a4ca3b0e164177f8ee89e8615b5126cdbf5c",
+  "working_tree": "Local changes may be present",
+  "tests": [
+    {
+      "test_id": "A01",
+      "test": "Static artifacts and evidence chain",
+      "status": "PASS",
+      "actual": "Three static paths recover answers; E01\u2013E05 match author source; ELF64 has no plaintext flag. Binary execution is a separate check."
+    },
+    {
+      "test_id": "A02",
+      "test": "Python sources",
+      "status": "PASS",
+      "actual": "All project Python files contain parseable code"
+    },
+    {
+      "test_id": "A03",
+      "test": "Artifact fingerprints",
+      "status": "PASS",
+      "actual": "Four approved source fingerprints match; player downloads also match"
+    },
+    {
+      "test_id": "L00",
+      "test": "Live checks",
+      "status": "NOT RUN",
+      "actual": "Offline mode was selected"
+    }
+  ]
+}

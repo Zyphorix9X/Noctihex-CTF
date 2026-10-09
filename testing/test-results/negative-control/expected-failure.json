@@ -1,0 +1,6 @@
+{
+  "test": "Tampered disposable player download",
+  "status": "PASS",
+  "observed_runner_exit": 1,
+  "actual": "Runner detected corrupted NHX-02 download and failed. Approved source files were unchanged."
+}

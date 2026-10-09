@@ -1,0 +1,9 @@
+risk_id,risk,owner,action,test_result,remaining_limitation
+R01,NHX-05 outbound access,Member 1 / Member 4,SSH gateway deployed; both challenge networks internal; controlled isolation passed after reset,PASS,Controlled endpoint checks establish the tested network boundaries
+R02,Organizer secrets exposed through Git,All members,"Existing .env, keys and private directory excluded; credentials kept private",PASS,Existing tracked author solutions and artifacts contain synthetic answers; never distribute repository to players
+R03,TLS identity invalid,Member 1 / Member 4,Correct local SAN certificate active; verified HTTPS passes,PASS,Self-signed local certificate must be explicitly trusted by participants
+R04,Incorrect stage flags or evidence,Members 2–4,"Real submissions, cross-stage failures, static chain and Linux ELF verified",PASS,32-bit capstone check is not cryptographic collision resistance
+R05,Data loss during reset/recovery,Member 1 / Member 4,Both challenge resets passed; real export restored into separate database volume; all 59 recovered player checks passed,PASS,Evidence covers this local restore; retain backups for later platform changes
+R06,Unexpected easy solution,Members 2–4,Unauthenticated/own-profile leakage and direct protected-file access rejected; ELF has no plaintext flag,PASS,Checks cover stated shortcuts; independent difficulty review is still required
+R07,Dependency drift,Member 1,Recorded actual CTFd 3.8.8 and Nginx 1.31.6; Python integration packages pinned,OPEN,Existing Docker images include moving tags; digest pinning awaits Docker inspect
+R08,False contribution claims,All members,AI assistance and wrapper origin explicitly recorded,OPEN,Members must make genuine contributions and explain code themselves

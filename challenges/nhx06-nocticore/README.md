@@ -36,13 +36,13 @@ Analyze the `nocticore` Linux ELF executable and provide the correct evidence ch
 
 ## Hints
 
-### Hint 1 — 10 points
+### Hint 1 — 20 points
 The previous stages contain more than individual flags.
 
-### Hint 2 — 20 points
+### Hint 2 — 40 points
 Five fragments form one chain. Their order matters.
 
-### Hint 3 — 30 points
+### Hint 3 — 60 points
 The executable calculates a 32-bit verification value from its input.
 
 ## Build Instructions

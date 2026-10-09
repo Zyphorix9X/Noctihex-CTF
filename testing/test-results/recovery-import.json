@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "project": "noctihex-recovery",
+  "separate_database_volume": true,
+  "challenge_count": 6,
+  "points": 1400,
+  "hints": 13,
+  "files": 4,
+  "actual": "Real CTFd export restored in separate Docker storage; player flow is tested next"
+}

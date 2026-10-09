@@ -16,7 +16,14 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 app = Flask(__name__)
 
 # Read private values from environment variables
-app.secret_key = os.environ["NHX03_SECRET_KEY"]
+app.secret_key = os.environ["FLASK_SECRET_KEY"]
+
+# Keep the challenge login cookie separate from CTFd
+app.config.update(
+    SESSION_COOKIE_NAME="nhx03_session",
+    SESSION_COOKIE_PATH="/labs/nhx03/",
+    SESSION_COOKIE_SECURE=True
+)
 
 FLAG = os.environ["NHX03_FLAG"]
 EVIDENCE = os.environ["NHX03_EVIDENCE"]

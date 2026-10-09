@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "challenge_count": 6,
+  "player_file_count": 4,
+  "hint_count": 13,
+  "zip_crc": "valid",
+  "restore_test": "BLOCKED: Docker project launch unavailable"
+}
