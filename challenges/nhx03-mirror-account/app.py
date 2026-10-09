@@ -1,7 +1,33 @@
-from flask import Flask, request, redirect, url_for, session, render_template, abort
+import os
+
+from flask import (
+    Flask,
+    request,
+    redirect,
+    url_for,
+    session,
+    render_template,
+    abort
+)
+
+from werkzeug.middleware.proxy_fix import ProxyFix
+
 
 app = Flask(__name__)
-app.secret_key = "noctihex-training-secret"
+
+# Read private values from environment variables
+app.secret_key = os.environ["NHX03_SECRET_KEY"]
+
+FLAG = os.environ["NHX03_FLAG"]
+EVIDENCE = os.environ["NHX03_EVIDENCE"]
+
+# Allows Flask to respect the Nginx path prefix:
+# /labs/nhx03/
+app.wsgi_app = ProxyFix(
+    app.wsgi_app,
+    x_prefix=1
+)
+
 
 # Fictional challenge users only
 USERS = {
@@ -10,6 +36,7 @@ USERS = {
         "profile_id": 1
     }
 }
+
 
 # Fictional profile records
 PROFILES = {
@@ -24,8 +51,8 @@ PROFILES = {
         "role": "Incident Analyst",
         "note": (
             "Recovered HEX-SHADOW record. "
-            "Flag: NOCTIHEX{mirror_account_exposed} | "
-            "Evidence fragment: ARCHIVE7"
+            f"Flag: {FLAG} | "
+            f"Evidence fragment: {EVIDENCE}"
         )
     },
 
