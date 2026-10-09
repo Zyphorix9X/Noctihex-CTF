@@ -1,0 +1,28 @@
+c658a4c 2026-10-09T16:16:56+05:30 Vian-Akhil [M4] test error fixing
+ff70d1d 2026-10-09T14:51:59+05:30 Vian-Akhil [M4] Update noctihex.crt
+55836ec 2026-10-09T14:04:22+05:30 Vian-Akhil Merge branch 'member2-challenges_A' into member4-integration
+dbfdcbf 2026-10-09T14:03:43+05:30 Vian-Akhil [M4] Update environment.md file
+177b837 2026-10-09T13:59:52+05:30 Aloka Fonseka Fix NHX-03 environment config and proxy routing
+d698f03 2026-10-08T23:17:48+05:30 Vian-Akhil [M4] Update nginx in docker-compose.yml
+86d0ab0 2026-10-08T21:44:29+05:30 Vian-Akhil Merge remote-tracking branch 'origin/member2-challenges_A' into member4-integration
+ea17bed 2026-10-08T21:43:21+05:30 Vian-Akhil [M4] Add integration documentation structure
+8cf1ce5 2026-10-08T14:16:22+05:30 IT24102622 Merge remote-tracking branch 'origin/member3-challenges-B' into member4-integration
+405630b 2026-10-08T10:17:44+05:30 Oshadi123342 [M3] Implement NHX-06 NoctiCore reverse engineering challenge
+1060a84 2026-10-08T09:11:32+05:30 Oshadi123342 [M3] Fix NHX-05 line endings and add solution documentation
+41d0f3b 2026-10-08T08:17:43+05:30 Oshadi123342 [M3] Add NHX-05 documentation
+bcc2354 2026-10-08T07:55:51+05:30 Oshadi123342 Merge remote-tracking branch 'origin/member2-challenges_A' into member3-challenges-B
+82c4f9b 2026-10-08T07:51:10+05:30 Oshadi123342 [M3] Complete NHX-04 documentation and validation
+534176f 2026-10-08T06:46:28+05:30 Oshadi123342 [M3] Implement NHX-05 Misplaced Trust challenge
+1da76bb 2026-10-07T17:01:54+05:30 Oshadi123342 [M3] Add NHX-04 Packet After Midnight challenge
+74b1f01 2026-10-07T15:49:17+05:30 Aloka Fonseka Add NHX-03 Mirror Account README
+60e90bc 2026-10-07T15:42:09+05:30 Aloka Fonseka Implement NHX-03 Mirror Account web challenge
+30e40d3 2026-10-07T14:58:44+05:30 Aloka Fonseka Implement NHX-02 Cipher at Dusk challenge
+aedc415 2026-10-07T14:34:55+05:30 Aloka Fonseka Implement NHX-01 Whispers in the Static challenge
+7ab1b03 2026-10-07T10:00:57+05:30 Senura Vilochana Merge branch 'member1-platform'
+1e63087 2026-10-07T09:54:07+05:30 Senura Vilochana Update platform folder
+5d6a057 2026-10-07T09:49:55+05:30 Senura Vilochana Merge branch 'member1-platform'
+af906c8 2026-10-07T09:41:46+05:30 Senura Vilochana Create member 1 self-development part
+e9706f3 2026-10-07T07:28:01+05:30 Senura Vilochana Update platform folder
+f737732 2026-10-07T07:25:12+05:30 Senura Vilochana Create folder structure and member 1 some parts
+67fb011 2026-10-07T05:58:09+05:30 Senura Vilochana Add CTFd Docker architecture
+66376b6 2026-10-07T05:36:22+05:30 Senura Vilochana First Commit

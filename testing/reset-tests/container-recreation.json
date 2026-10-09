@@ -1,0 +1,16 @@
+[
+  {
+    "stage": "nhx03",
+    "status": "PASS",
+    "before_container": "0b859e59b15980af403b6d29e4f6267190290f39d7d2a68d29fccabc2728f222",
+    "after_container": "dba7e6fed6d2a571f02b8b0f2fd6e08de3895e5dcafb1d5f261e177649da7117",
+    "actual": "Disposable marker absent after recreation"
+  },
+  {
+    "stage": "nhx05",
+    "status": "PASS",
+    "before_container": "ee7f980b3339eb8966ee623be034b99890879708c7fda2a7fad9511377b0ce68",
+    "after_container": "00eb09c8d352b0a7f21d88cd94508ed481b489e0e8701111d6d9c0a06e1a6a64",
+    "actual": "Disposable marker absent after recreation"
+  }
+]

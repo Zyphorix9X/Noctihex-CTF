@@ -70,13 +70,31 @@ services:
     environment:
       NHX05_FLAG: ${NHX05_FLAG}
       NHX05_EVIDENCE: ${NHX05_EVIDENCE}
-    ports:
-      - "127.0.0.1:2225:22"
+    volumes:
+      - ssh_host_keys:/etc/ssh/hostkeys
     networks:
-      - challenges
-      - nhx05_access
+      - linux_challenge
     mem_limit: 256m
     pids_limit: 100
+
+  ssh_gateway:
+    image: nginx:alpine
+    restart: unless-stopped
+    user: "101:101"
+    entrypoint: ["nginx", "-c", "/etc/nginx/ssh-gateway.conf", "-g", "daemon off;"]
+    ports:
+      - "127.0.0.1:2225:2225"
+    volumes:
+      - ./platform/nginx/ssh-gateway.conf:/etc/nginx/ssh-gateway.conf:ro
+    networks:
+      - linux_challenge
+      - ssh_access
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 64m
+    pids_limit: 50
+    depends_on:
+      - nhx05
 
   nginx:
     image: nginx:alpine
@@ -106,7 +124,10 @@ networks:
   challenges:
     internal: true
 
-  nhx05_access:
+  linux_challenge:
+    internal: true
+
+  ssh_access:
     driver: bridge
 
   nginx_access:
@@ -116,3 +137,4 @@ volumes:
 
   mysql_data:
   ctfd_uploads:
+  ssh_host_keys:

@@ -1,0 +1,5 @@
+test_id,test,status,actual
+A01,Static artifacts and evidence chain,PASS,Three static paths recover answers; E01–E05 match author source; ELF64 has no plaintext flag. Binary execution is a separate check.
+A02,Python sources,PASS,All project Python files contain parseable code
+A03,Artifact fingerprints,FAIL,NHX-02: download differs
+L00,Live checks,NOT RUN,Offline mode was selected

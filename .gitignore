@@ -4,3 +4,6 @@ private/
 __pycache__/
 .venv/
 .vscode/
+.pytest_cache/
+testing/downloads/
+*.mp4

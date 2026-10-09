@@ -1,0 +1,8 @@
+test_id,test,status,actual
+A01,Static artifacts and evidence chain,PASS,Three static paths recover answers; E01–E05 match author source; ELF64 has no plaintext flag. Binary execution is a separate check.
+A02,Python sources,PASS,All project Python files contain parseable code
+A03,Artifact fingerprints,PASS,Four approved source fingerprints match; player downloads also match
+L01,Docker service restrictions,BLOCKED,Session cannot access Docker/WSL control connection
+L04,Challenge network configuration,BLOCKED,Session cannot access Docker/WSL control connection
+L02,Platform HTTPS,PASS,Expected page returned through verified HTTPS
+L03,NHX-03 HTTPS,PASS,Expected page returned through verified HTTPS

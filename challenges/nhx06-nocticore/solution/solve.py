@@ -27,8 +27,8 @@ def main():
         print("Evidence chain matches the development verifier.")
     else:
         print("Evidence chain does not match.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
     main()
-    
