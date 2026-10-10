@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-10T12:08:07.003420+05:30",
+  "source_commit": "e8f7ed20916e7b36400f9793660a734db646e218",
+  "working_tree": "Local changes may be present",
+  "tests": [
+    {
+      "test_id": "A01",
+      "test": "Static artifacts and evidence chain",
+      "status": "FAIL",
+      "actual": "Earlier evidence does not match capstone source"
+    },
+    {
+      "test_id": "A02",
+      "test": "Python sources",
+      "status": "PASS",
+      "actual": "All project Python files contain parseable code"
+    },
+    {
+      "test_id": "A03",
+      "test": "Artifact fingerprints",
+      "status": "PASS",
+      "actual": "Four approved source fingerprints match; player downloads also match"
+    },
+    {
+      "test_id": "L01",
+      "test": "Docker service restrictions",
+      "status": "PASS",
+      "actual": "Seven containers running; host exposure limited to loopback; challenge resource restrictions present"
+    },
+    {
+      "test_id": "L04",
+      "test": "Challenge network configuration",
+      "status": "PASS",
+      "actual": "Both challenge containers attach only to internal networks; separate live connection checks are still required"
+    },
+    {
+      "test_id": "L02",
+      "test": "Platform HTTPS",
+      "status": "FAIL",
+      "actual": "CTFd first-run setup is unfinished"
+    },
+    {
+      "test_id": "L03",
+      "test": "NHX-03 HTTPS",
+      "status": "PASS",
+      "actual": "Expected page returned through verified HTTPS"
+    }
+  ]
+}
