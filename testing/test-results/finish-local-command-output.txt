@@ -1,0 +1,221 @@
+ Image noctihex-recovery-nhx03 Building 
+ Image noctihex-recovery-nhx05 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.18kB done
+#1 DONE 0.0s
+
+#2 [nhx03 internal] load build definition from Dockerfile
+#2 transferring dockerfile: 287B done
+#2 DONE 0.0s
+
+#3 [nhx05 internal] load build definition from Dockerfile
+#3 transferring dockerfile: 953B done
+#3 DONE 0.0s
+
+#4 [nhx05 internal] load metadata for docker.io/library/ubuntu:24.04
+#4 ...
+
+#5 [nhx03 internal] load metadata for docker.io/library/python:3.13-slim
+#5 DONE 0.2s
+
+#6 [nhx03 internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [nhx03 1/7] FROM docker.io/library/python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f
+#7 resolve docker.io/library/python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f 0.0s done
+#7 DONE 0.0s
+
+#8 [nhx03 internal] load build context
+#8 transferring context: 174B done
+#8 DONE 0.0s
+
+#9 [nhx03 3/7] COPY requirements.txt .
+#9 CACHED
+
+#10 [nhx03 5/7] COPY app.py .
+#10 CACHED
+
+#11 [nhx03 4/7] RUN pip install --no-cache-dir -r requirements.txt
+#11 CACHED
+
+#12 [nhx03 6/7] COPY templates ./templates
+#12 CACHED
+
+#13 [nhx03 2/7] WORKDIR /app
+#13 CACHED
+
+#14 [nhx03 7/7] RUN useradd -m noctihex
+#14 CACHED
+
+#15 [nhx03] exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:d8168beb6c2b372c603191fe9864324e4a705d124a6bb471740bac64f2a4bf24 done
+#15 exporting config sha256:1f6b5e8243560d5ba118c6d0a8f61edaf658eb35dd14d0db75c7b4d11a33cc58 done
+#15 exporting attestation manifest sha256:91c2d138edc4b7be50cccee44cc6c6d79ffd9a935ac982f31d3f5b9bbe9aefd0 0.0s done
+#15 exporting manifest list sha256:911ce20ea7bd97e042a50faf5b021aba38c30e371069e280ba350a79a73e6e46 0.0s done
+#15 naming to docker.io/library/noctihex-recovery-nhx03:latest done
+#15 unpacking to docker.io/library/noctihex-recovery-nhx03:latest 0.0s done
+#15 DONE 0.1s
+
+#4 [nhx05 internal] load metadata for docker.io/library/ubuntu:24.04
+#4 ...
+
+#16 [nhx03] resolving provenance for metadata file
+#16 DONE 0.0s
+
+#4 [nhx05 internal] load metadata for docker.io/library/ubuntu:24.04
+#4 ...
+
+#17 [auth] library/ubuntu:pull token for registry-1.docker.io
+#17 DONE 0.0s
+
+#4 [nhx05 internal] load metadata for docker.io/library/ubuntu:24.04
+#4 DONE 2.7s
+
+#18 [nhx05 internal] load .dockerignore
+#18 transferring context: 2B done
+#18 DONE 0.0s
+
+#19 [nhx05 builder 1/5] FROM docker.io/library/ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55
+#19 resolve docker.io/library/ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55 0.0s done
+#19 DONE 0.0s
+
+#20 [nhx05 internal] load build context
+#20 transferring context: 69B done
+#20 DONE 0.0s
+
+#21 [nhx05 stage-1 6/9] RUN chown root:root     /usr/local/bin/nocti-backup &&     chmod 755     /usr/local/bin/nocti-backup
+#21 CACHED
+
+#22 [nhx05 stage-1 2/9] RUN apt-get update &&     apt-get install -y         openssh-server         sudo &&     rm -rf /var/lib/apt/lists/*
+#22 CACHED
+
+#23 [nhx05 builder 2/5] RUN apt-get update &&     apt-get install -y gcc
+#23 CACHED
+
+#24 [nhx05 stage-1 5/9] COPY --from=builder     /build/nocti-backup     /usr/local/bin/nocti-backup
+#24 CACHED
+
+#25 [nhx05 builder 5/5] RUN gcc nocti-backup.c -o nocti-backup
+#25 CACHED
+
+#26 [nhx05 stage-1 4/9] RUN mkdir -p     /run/sshd     /opt/noctihex/backups
+#26 CACHED
+
+#27 [nhx05 builder 3/5] WORKDIR /build
+#27 CACHED
+
+#28 [nhx05 stage-1 8/9] COPY entrypoint.sh /entrypoint.sh
+#28 CACHED
+
+#29 [nhx05 builder 4/5] COPY nocti-backup.c .
+#29 CACHED
+
+#30 [nhx05 stage-1 7/9] RUN echo     'analyst ALL=(root) NOPASSWD: /usr/local/bin/nocti-backup'     > /etc/sudoers.d/noctihex &&     chmod 440     /etc/sudoers.d/noctihex
+#30 CACHED
+
+#31 [nhx05 stage-1 3/9] RUN useradd     -m     -s /bin/bash     analyst &&     echo "analyst:nocti2026" | chpasswd
+#31 CACHED
+
+#32 [nhx05 stage-1 9/9] RUN chmod +x /entrypoint.sh
+#32 CACHED
+
+#33 [nhx05] exporting to image
+#33 exporting layers done
+#33 exporting manifest sha256:339df0874c8f9595d96c337b09fe8ee1310e2e25db312a5b6adeb9a53e49f2c1 done
+#33 exporting config sha256:d0f694a1058fec43e93dacc4c9f865dcf5143738fa0496f4a70031b7c87542ef done
+#33 exporting attestation manifest sha256:624cbf8fbabb5effbe0545bdfa1aba5da7eb3501bb810c2c1e1e32e01cf0a2a9
+#33 exporting attestation manifest sha256:624cbf8fbabb5effbe0545bdfa1aba5da7eb3501bb810c2c1e1e32e01cf0a2a9 0.0s done
+#33 exporting manifest list sha256:3181148e595e4bcc22931ae80c4bd584ee53bd00a854ded1ba7700056155f197 0.0s done
+#33 naming to docker.io/library/noctihex-recovery-nhx05:latest done
+#33 unpacking to docker.io/library/noctihex-recovery-nhx05:latest 0.0s done
+#33 DONE 0.1s
+
+#34 [nhx05] resolving provenance for metadata file
+#34 DONE 0.0s
+ Image noctihex-recovery-nhx05 Built 
+ Image noctihex-recovery-nhx03 Built 
+ Container noctihex-recovery-mysql-1 Running 
+ Container noctihex-recovery-redis-1 Running 
+ Container noctihex-recovery-ctfd-1 Running 
+ Container noctihex-recovery-nhx03-1 Running 
+ Container noctihex-recovery-nhx05-1 Running 
+ Container noctihex-recovery-ssh_gateway-1 Running 
+ Container noctihex-recovery-nginx-1 Recreate 
+ Container noctihex-recovery-nginx-1 Recreated 
+ Container noctihex-recovery-mysql-1 Waiting 
+ Container noctihex-recovery-redis-1 Waiting 
+ Container noctihex-recovery-mysql-1 Healthy 
+ Container noctihex-recovery-redis-1 Healthy 
+ Container noctihex-recovery-nginx-1 Starting 
+ Container noctihex-recovery-nginx-1 Started 
+Recovery import verified: separate database, six stages, 1400 points, thirteen hints, four files
+SSH host identity verified against local container and saved
+PASS Invalid player login Wrong credentials rejected with login page
+PASS Player authentication Separate ordinary player logged in
+PASS Six visible stages Six stages totaling 1400 points
+PASS NHX-01 player download Player download SHA256 matches approved source
+PASS NHX-01 wrong flag Platform response: incorrect
+PASS NHX-01 cross-stage flag Platform response: incorrect
+PASS NHX-01 correct flag Platform response: correct
+PASS NHX-01 duplicate flag Platform response: already_solved
+PASS NHX-02 player download Player download SHA256 matches approved source
+PASS NHX-02 wrong flag Platform response: incorrect
+PASS NHX-02 cross-stage flag Platform response: incorrect
+PASS NHX-02 correct flag Platform response: correct
+PASS NHX-02 duplicate flag Platform response: already_solved
+PASS NHX-03 wrong flag Platform response: incorrect
+PASS NHX-03 cross-stage flag Platform response: incorrect
+PASS NHX-03 correct flag Platform response: correct
+PASS NHX-03 duplicate flag Platform response: already_solved
+PASS NHX-04 player download Player download SHA256 matches approved source
+PASS NHX-04 wrong flag Platform response: incorrect
+PASS NHX-04 cross-stage flag Platform response: incorrect
+PASS NHX-04 correct flag Platform response: correct
+PASS NHX-04 duplicate flag Platform response: already_solved
+PASS NHX-05 wrong flag Platform response: incorrect
+PASS NHX-05 cross-stage flag Platform response: incorrect
+PASS NHX-05 correct flag Platform response: correct
+PASS NHX-05 duplicate flag Platform response: already_solved
+PASS NHX-06 player download Player download SHA256 matches approved source
+PASS NHX-06 wrong flag Platform response: incorrect
+PASS NHX-06 cross-stage flag Platform response: incorrect
+PASS NHX-06 correct flag Platform response: correct
+PASS NHX-06 duplicate flag Platform response: already_solved
+PASS No-hint total score Player score: 1400
+PASS NHX-01 hint prices Player-visible hint costs match proposal
+PASS NHX-01 hint purchase First progressive hint unlocked
+PASS NHX-02 hint prices Player-visible hint costs match proposal
+PASS NHX-02 hint purchase First progressive hint unlocked
+PASS NHX-03 hint prices Player-visible hint costs match proposal
+PASS NHX-03 hint purchase First progressive hint unlocked
+PASS NHX-04 hint prices Player-visible hint costs match proposal
+PASS NHX-04 hint purchase First progressive hint unlocked
+PASS NHX-05 hint prices Player-visible hint costs match proposal
+PASS NHX-05 hint purchase First progressive hint unlocked
+PASS NHX-06 hint prices Player-visible hint costs match proposal
+PASS NHX-06 hint purchase First progressive hint unlocked
+PASS Hint deductions Score 1335; expected 1335
+PASS NHX-03 unauthenticated profile Unauthenticated request redirects without flag
+PASS NHX-03 wrong login Generic error displayed
+PASS NHX-03 login and routing Expected profile under challenge prefix; own record contains no flag
+PASS NHX-03 intended solve Intended profile request recovers configured flag and E03
+PASS NHX-03 cookie boundary Dedicated Secure cookie is restricted to challenge path
+PASS NHX-03 logout Logout removes authenticated access
+PASS NHX-05 SSH player SSH authenticates a non-root analyst
+PASS NHX-05 restricted sudo Only author-configured backup sudo permission inspected
+PASS NHX-05 protected file Direct protected-file access denied
+PASS NHX-05 normal backup Allowed backup succeeds
+PASS NHX-05 outside-prefix path Outside-prefix path rejected
+PASS NHX-05 intended solve Intended training traversal recovers protected flag and E05
+PASS NHX-06 Linux binary correct chain Delivered ELF executed in Linux and accepted E01ΓÇôE05
+PASS NHX-06 Linux binary wrong chain Wrong chain exits nonzero without a flag
+CTFd backup saved privately
+[PASS] A01: Static artifacts and evidence chain ù Three static paths recover answers; E01ûE05 match author source; ELF64 has no plaintext flag. Binary execution is a separate check.
+[PASS] A02: Python sources ù All project Python files contain parseable code
+[PASS] A03: Artifact fingerprints ù Four approved source fingerprints match; player downloads also match
+[PASS] L01: Docker service restrictions ù Seven containers running; host exposure limited to loopback; challenge resource restrictions present
+[PASS] L04: Challenge network configuration ù Both challenge containers attach only to internal networks; separate live connection checks are still required
+[PASS] L02: Platform HTTPS ù Expected page returned through verified HTTPS
+[PASS] L03: NHX-03 HTTPS ù Expected page returned through verified HTTPS
