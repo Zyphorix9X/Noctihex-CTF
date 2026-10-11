@@ -15,5 +15,4 @@ This is an educational reverse-engineering mechanism; it is not cryptographic
 authentication. A participant can reconstruct the algorithm and flag decoder.
 The approved intended path uses earlier evidence; collision resistance is limited.
 
-AI-assisted integration changes are listed in `docs/contributions.md`. The actual
-video and each member's explanation must be produced by the members themselves.
+AI-assisted integration changes are listed in `docs/contributions.md`.

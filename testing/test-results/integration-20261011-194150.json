@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-11T19:41:50.614773+05:30",
+  "source_commit": "7e47f7f487c75af72d1f18eef9f834d91e546427",
+  "working_tree": "Local changes may be present",
+  "tests": [
+    {
+      "test_id": "A01",
+      "test": "Static artifacts and evidence chain",
+      "status": "PASS",
+      "actual": "Three static paths recover answers; E01\u2013E05 match author source; ELF64 has no plaintext flag. Binary execution is a separate check."
+    },
+    {
+      "test_id": "A02",
+      "test": "Python sources",
+      "status": "PASS",
+      "actual": "All project Python files contain parseable code"
+    },
+    {
+      "test_id": "A03",
+      "test": "Artifact fingerprints",
+      "status": "PASS",
+      "actual": "Four approved source fingerprints match; player downloads also match"
+    },
+    {
+      "test_id": "L01",
+      "test": "Docker service restrictions",
+      "status": "PASS",
+      "actual": "Seven containers running; host exposure limited to loopback; challenge resource restrictions present"
+    },
+    {
+      "test_id": "L04",
+      "test": "Challenge network configuration",
+      "status": "PASS",
+      "actual": "Both challenge containers attach only to internal networks; separate live connection checks are still required"
+    },
+    {
+      "test_id": "L02",
+      "test": "Platform HTTPS",
+      "status": "PASS",
+      "actual": "Expected page returned through verified HTTPS"
+    },
+    {
+      "test_id": "L03",
+      "test": "NHX-03 HTTPS",
+      "status": "PASS",
+      "actual": "Expected page returned through verified HTTPS"
+    }
+  ]
+}

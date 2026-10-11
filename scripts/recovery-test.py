@@ -1,8 +1,3 @@
-"""Restore only the separate noctihex-recovery project, then verify its metadata.
-
-The primary deployment is never imported over. Requires separate recovery Docker
-project already started by finish-local.ps1.
-"""
 import json,subprocess,time,importlib.util,secrets
 from pathlib import Path
 from zipfile import ZipFile

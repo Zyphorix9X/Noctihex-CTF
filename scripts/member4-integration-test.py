@@ -1,8 +1,3 @@
-"""Repeatable integration checks; blocked checks are never counted as passes.
-
-AI-assisted implementation: Member 4 must review, understand and adapt this code.
-Default mode is read-only. --offline performs artifact/source checks without Docker.
-"""
 import argparse
 import ast
 import csv
