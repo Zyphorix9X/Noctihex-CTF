@@ -1,0 +1,8 @@
+test_id,test,status,actual
+A01,Static artifacts and evidence chain,FAIL,Earlier evidence does not match capstone source
+A02,Python sources,PASS,All project Python files contain parseable code
+A03,Artifact fingerprints,PASS,Four approved source fingerprints match; player downloads also match
+L01,Docker service restrictions,PASS,Seven containers running; host exposure limited to loopback; challenge resource restrictions present
+L04,Challenge network configuration,PASS,Both challenge containers attach only to internal networks; separate live connection checks are still required
+L02,Platform HTTPS,FAIL,CTFd first-run setup is unfinished
+L03,NHX-03 HTTPS,PASS,Expected page returned through verified HTTPS
